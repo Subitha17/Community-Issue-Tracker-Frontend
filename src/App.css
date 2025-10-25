@@ -1,0 +1,230 @@
+/* 🌈 Global Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌟 Header (Navigation Bar) - Full Width */
+nav {
+  width: 100%;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  color: #facc15; /* Yellow accent */
+}
+
+/* 🧾 Page Content Area */
+main, .container {
+  flex: 1;
+  padding: 120px 25px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 🧱 Form Section */
+form {
+  background: #ffffff;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+form:hover {
+  transform: translateY(-4px);
+}
+
+form h2 {
+  color: #2563eb;
+  margin-bottom: 25px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ✏️ Inputs & Textareas */
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+  outline: none;
+}
+
+/* 🚀 Buttons */
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #06b6d4, #2563eb);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  transform: translateY(-3px);
+}
+
+/* 🗂️ Issue Cards */
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.issue-card {
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.issue-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.issue-card h3 {
+  color: #2563eb;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.issue-card p {
+  color: #475569;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.category {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.buttons button {
+  flex: 1;
+  background: linear-gradient(90deg, #f97316, #ea580c);
+  border-radius: 25px;
+}
+
+.buttons button:nth-child(2) {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+/* ⚙️ Footer - Same Color as Header */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 18px 10px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: #facc15;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  form {
+    margin: 20px;
+    padding: 25px 20px;
+  }
+
+  .issue-card {
+    padding: 18px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
