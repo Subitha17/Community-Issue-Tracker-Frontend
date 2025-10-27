@@ -7,9 +7,6 @@ export default function Navbar() {
       <Link to="/" className="hover:text-yellow-300 transition">
         Home
       </Link>
-      <Link to="/report" className="hover:text-yellow-300 transition">
-        Report Issue
-      </Link>
       <Link to="/report-issue">Report</Link>
       <Link to="/view" className="hover:text-yellow-300 transition">
         View Issues
