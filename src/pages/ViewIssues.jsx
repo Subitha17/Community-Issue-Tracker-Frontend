@@ -34,7 +34,7 @@ export default function ViewIssues() {
   // ✅ Delete an issue
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/issues/${id}`, {
+      const res = await fetch(`https://community-issue-tracker-backend.onrender.com/api/issues/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Failed to delete issue");
@@ -58,7 +58,7 @@ export default function ViewIssues() {
   // ✅ Save updated issue
   const handleUpdate = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/issues/${id}`, {
+      const res = await fetch(`https://community-issue-tracker-backend.onrender.com/api/issues/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(editData),
