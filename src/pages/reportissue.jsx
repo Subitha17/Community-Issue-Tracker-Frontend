@@ -17,7 +17,7 @@ export default function ReportIssue() {
     const issueData = { title, description, category };
 
     try {
-      const response = await fetch("http://community-issue-tracker-frontend.vercel.app/api/issues", {
+      const response = await fetch("https://community-issue-tracker-backend.onrender.com/api/issues", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(issueData),

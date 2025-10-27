@@ -15,7 +15,7 @@ export default function ViewIssues() {
   const fetchIssues = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://community-issue-tracker-frontend.vercel.app/api/issues");
+      const res = await fetch("https://community-issue-tracker-backend.onrender.com/api/issues");
       if (!res.ok) throw new Error("Failed to fetch issues");
       const data = await res.json();
       setIssues(data);
